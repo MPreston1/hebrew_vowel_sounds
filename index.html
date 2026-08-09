@@ -95,11 +95,20 @@
     color: #444;
   }
   .notes_ipa {
-    font-family: 'Noto Sans', sans-serif;
+    /* Hebrew niqqud marks: use the system font stack (same as .symbol-box),
+       NOT the embedded Noto Sans below, which is Latin-only and has no
+       Hebrew glyphs at all. */
     font-size: 0.9rem;
     white-space: nowrap;
     direction: rtl;
     unicode-bidi: isolate;
+  }
+  .notes_latin_ipa {
+    /* Latin IPA in brackets, e.g. [e̞] — this DOES need the embedded
+       Noto Sans, for the same combining-diacritic reason as .ipa. */
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
   .diphthong-row {
     background: #fff8e6;
@@ -185,7 +194,7 @@
           <span class="symbol-box">◌ׇ</span>
         </div>
       </td>
-      <td class="notes">Khataf kamatz (<span class="notes_ipa">◌ֳ</span>) and kamatz katan (<span class="notes_ipa">◌ׇ</span>) are pronounced [o̞], while kamatz gadol (<span class="notes_ipa">◌ָ</span>) is pronounced [a].</td>
+      <td class="notes">Khataf kamatz (<span class="notes_ipa">◌ֳ</span>) and kamatz katan (<span class="notes_ipa">◌ׇ</span>) are pronounced <span class="notes_latin_ipa">[o̞]</span>, while kamatz gadol (<span class="notes_ipa">◌ָ</span>) is pronounced <span class="notes_latin_ipa">[a]</span>.</td>
     </tr>
 
     <tr>
