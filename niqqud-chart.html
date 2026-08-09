@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hebrew Vowel Sounds (grouped by pronunciation)</title>
+<style>
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./NotoSans-Regular.woff2') format('woff2');
+  }
+  body {
+    font-family: -apple-system, Georgia, serif;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #222;
+    line-height: 1.5;
+  }
+  h1 { font-size: 1.4rem; }
+  .source {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  table.groups {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  table.groups > tbody > tr > td,
+  table.groups > tbody > tr > th {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    vertical-align: top;
+    text-align: left;
+  }
+  table.groups th {
+    background: #f4f4f4;
+    text-align: left;
+  }
+  .ipa {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  .play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    background: none;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+  }
+  .play-btn:hover {
+    background: #eef6ff;
+    border-color: #5b9bd5;
+  }
+  .play-btn:disabled {
+    cursor: default;
+    opacity: 0.55;
+    border-style: dashed;
+  }
+  .play-icon {
+    font-size: 1rem;
+  }
+  .symbols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    direction: rtl;
+  }
+  .symbol-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    padding: 0 0.3rem;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background: #fafafa;
+    font-size: 1.6rem;
+    direction: rtl;
+    unicode-bidi: isolate;
+  }
+  .notes {
+    font-size: 0.9rem;
+    color: #444;
+  }
+  .diphthong-row {
+    background: #fff8e6;
+  }
+</style>
+</head>
+<body>
+
+<h1>Hebrew Vowel Sounds (grouped by pronunciation, modern Israeli Hebrew)</h1>
+<p class="source">
+  Source: Wikipedia, "Niqqud" — Chart section, modern Israeli pronunciation only,
+  grouped by identical sound. Notes are paraphrased, not quoted.<br>
+  ◌ stands in for the letter a niqqud mark would normally attach to (it carries
+  no sound of its own). Where a mark is combined with an actual letter —
+  י, ה, א, or ו — that letter is a fixed part of the spelling and is shown.
+</p>
+
+<table class="groups">
+  <tbody>
+
+    <tr>
+      <th style="width:12%">IPA</th>
+      <th style="width:48%">Vowel(s)</th>
+      <th>Notes</th>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/e.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [e̞] or Ø</button><br><small>shva</small></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ְ</span>
+        </div>
+      </td>
+      <td class="notes">Shva — represents either the /e/ sound or silence, depending on grammatical context.</td>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/e.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [e̞]</button></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ֱ</span>
+          <span class="symbol-box">◌ֵ</span>
+          <span class="symbol-box">◌ֶ</span>
+          <span class="symbol-box">◌ֶה</span>
+          <span class="symbol-box">◌ֶא</span>
+        </div>
+      </td>
+      <td class="notes"></td>
+    </tr>
+
+    <tr class="diphthong-row">
+      <td class="ipa"><button class="play-btn" disabled aria-label="Audio not yet added"><span class="play-icon">🔇</span> [ei̯]</button><br><small>diphthong</small></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ֵי</span>
+          <span class="symbol-box">◌ֵה</span>
+          <span class="symbol-box">◌ֵא</span>
+          <span class="symbol-box">◌ֶי</span>
+        </div>
+      </td>
+      <td class="notes">Tsere malei is often pronounced as the diphthong "ei," regardless of ending. Segol malei is often pronounced this way too, when it ends in a yod.</td>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/a.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [a]</button></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ֲ</span>
+          <span class="symbol-box">◌ַ</span>
+          <span class="symbol-box">◌ַה</span>
+          <span class="symbol-box">◌ַא</span>
+          <span class="symbol-box">◌ָ</span>
+          <span class="symbol-box">◌ָה</span>
+          <span class="symbol-box">◌ָא</span>
+        </div>
+      </td>
+      <td class="notes">Patach under a final ח/ע/ה is sounded <em>before</em> the consonant — the "furtive" patach.</td>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/o.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [o̞]</button></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ֳ</span>
+          <span class="symbol-box">◌ׇ</span>
+          <span class="symbol-box">◌ֹ</span>
+          <span class="symbol-box">וֹ</span>
+          <span class="symbol-box">◌ֹה</span>
+          <span class="symbol-box">◌ֹא</span>
+        </div>
+      </td>
+      <td class="notes"></td>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/i.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [i]</button></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ִ</span>
+          <span class="symbol-box">◌ִי</span>
+        </div>
+      </td>
+      <td class="notes">Hiriq malei (with י) is more common in modern spelling.</td>
+    </tr>
+
+    <tr>
+      <td class="ipa"><button class="play-btn" data-audio="audio/u.ogg" aria-label="Play sound"><span class="play-icon">🔊</span> [u]</button></td>
+      <td>
+        <div class="symbols">
+          <span class="symbol-box">◌ֻ</span>
+          <span class="symbol-box">וּ</span>
+          <span class="symbol-box">וּה</span>
+          <span class="symbol-box">וּא</span>
+        </div>
+      </td>
+      <td class="notes">Shuruk (with ו) is more common in modern spelling than kubutz.</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<script>
+  document.querySelectorAll('.play-btn[data-audio]').forEach(function (btn) {
+    var audio = new Audio(btn.dataset.audio);
+    btn.addEventListener('click', function () {
+      audio.currentTime = 0;
+      audio.play();
+    });
+  });
+</script>
+
+</body>
+</html>
